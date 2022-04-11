@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head') %>
+
+<body>
+
+    <%- include('includes/navbar') %>    
+    <br/><br/>
+    <h1>Titulo: <%= cd.titulo %></h1>
+    <br/><br/>
+    <h2>Artista: <%= cd.artista %></h2>
+    <br/><br/>
+    <h3>Lançado em: <%= cd.datalancamento %></h3>
+    <br/><br/>
+    <h3>Numero de Faixas: <%= cd.faixas %></h3>
+    <br/><br/>
+    <!--p><%- cd.faixas %></p-->
+
+    <a class="btn btn-warning btn-sm" style="color: #ffffff" href="/cds/alterar-cd/<%= cd.id %>">Alterar</a>
+    <br/><br/>
+    <a class="btn btn-danger btn-sm" style="color: #ffffff" href="/cds/deletar/<%= cd.id %>">Deletar</a>
+</body>
+</html>

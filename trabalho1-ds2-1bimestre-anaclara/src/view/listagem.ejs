@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head') %>
+
+<body>
+    <%- include('includes/navbar') %>    
+    <br/><br/>
+    <h1>Lista de todos os filmes</h1>
+    <div class="container">
+      <h3>Busca por:</h3>
+      <form action="/cds/" method="get">
+        <div class="form-group">
+            <label for="buscatitulo">Título</label>
+            <input type="text" class="form-control" name="buscatitulo" id="buscatitulo">
+            <label for="buscadata">Data</label>
+            <br/>
+            <input type="date" name="buscadata" id="buscadata">
+            <button type="submit" id="botao2" class="btn btn-sm">Buscar</button>
+        </div>
+      </form>
+    </div>
+    <br/><br/>
+    <table class="table" id="cds">
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th></th>
+        </tr>
+        <% cds.forEach(cd => { %>
+          <tr>
+            <td><%= cd.id %></td>
+            <td><%= cd.titulo %></td>
+            <td> <a class="btn btn-warning btn-sm" a href="/cds/<%= cd.id %>" role="button"> Ver detalhes </a> </td>
+          </tr>
+        <% }) %>
+    </table>
+</body>
+
+</html>

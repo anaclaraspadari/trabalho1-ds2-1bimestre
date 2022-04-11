@@ -1,0 +1,24 @@
+<html lang="pt-br">
+
+<%- include('includes/head') %>
+
+<body>
+
+    <%- include('includes/navbar') %>
+    <h1>Login</h1>
+
+    <form action="/users/login" method="post">
+        <label for="nome">Email</label>
+        <input type="email" name="email">
+        <br/><br/>
+        <label for="nome">Senha</label>
+        <input type="password" name="senha">
+        <br/><br/>
+        <input type="submit" value="Entrar" />
+        <a href="/users/tela-cadastro">Não tem uma conta? Cadastre-se!</a>
+        <br/>
+    </form>
+    <br /><hr><br />
+
+</body>
+</html>

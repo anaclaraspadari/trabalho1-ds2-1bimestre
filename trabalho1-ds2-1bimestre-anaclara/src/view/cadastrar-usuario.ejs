@@ -1,0 +1,28 @@
+<html lang="pt-br">
+
+<%- include('includes/head') %>
+
+<body>
+
+    <%- include('includes/navbar') %>
+    <h1>Cadastro de Usuario</h1>
+    <form action="/users/cadastrar" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome">
+        <br /><br />
+        <label for="nome">Email</label>
+        <input type="email" name="email">
+        <br /><br />
+        <label for="nome">Senha</label>
+        <input type="password" name="senha">
+        <br /><br />
+        <label for="ck_eh_admin">É admin?</label>
+        <input type="checkbox" id="ck_eh_admin" name="eh_admin"/>
+        <br /><br />
+        <input type="submit" value="Cadastrar Usuario"/>
+    </form>
+
+    <br /><hr><br />
+
+</body>
+</html>
